@@ -56,7 +56,7 @@ def chat_with_groq(query):
             "Keep your responses brief but meaningful."
         )
         full_prompt = f"{empathetic_prompt}\nUser: {query}\nAI:"
-        chat_model = ChatGroq(groq_api_key="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", model_name="llama3-8b-8192")
+        chat_model = ChatGroq(groq_api_key="YOUR GROQ ID", model_name="llama3-8b-8192")
         response = chat_model.invoke([HumanMessage(content=full_prompt)])
         return response.content
     except Exception as e:
